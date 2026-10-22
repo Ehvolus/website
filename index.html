@@ -28,6 +28,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
 <link rel="stylesheet" href="assets/site.css?v=lab26">
+<link rel="stylesheet" href="assets/medicao.css?v=1">
+<script src="assets/medicao.js?v=1" defer></script>
 </head>
 <body>
 
@@ -46,7 +48,7 @@
 
     <div class="header-actions">
       <a class="header-link" href="https://app.ehvolus.com.br" target="_blank" rel="noopener">Login</a>
-      <a class="btn btn--gold btn--sm" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Registro de interesse</a>
+      <a class="btn btn--gold btn--sm" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener" data-cta="geral" data-cta-local="cabecalho">Registro de interesse</a>
     </div>
   </div>
 </header>
@@ -64,7 +66,7 @@
     </ul>
     <div class="nav-panel-actions">
       <a class="header-link header-link--panel" href="https://app.ehvolus.com.br" target="_blank" rel="noopener">Login</a>
-      <a class="btn btn--gold" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Registro de interesse</a>
+      <a class="btn btn--gold" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener" data-cta="geral" data-cta-local="menu">Registro de interesse</a>
     </div>
   </nav>
 </div>
@@ -87,9 +89,9 @@
         <p class="hero-subtitle">A EHVOLUS conecta empresas que precisam executar, profissionais que fazem acontecer e clientes que querem o serviço resolvido. Tudo em uma única plataforma.</p>
         <div class="hero-actions">
           <div class="hero-ctas">
-            <a class="hero-path" href="#empresas"><span>Sou empresa</span></a>
-            <a class="hero-path" href="#profissionais"><span>Sou profissional</span></a>
-            <a class="hero-path" href="#clientes"><span>Preciso de um serviço</span></a>
+            <a class="hero-path" href="#empresas" data-cta="empresa" data-cta-local="hero"><span>Sou empresa</span></a>
+            <a class="hero-path" href="#profissionais" data-cta="profissional" data-cta-local="hero"><span>Sou profissional</span></a>
+            <a class="hero-path" href="#clientes" data-cta="cliente" data-cta-local="hero"><span>Preciso de um serviço</span></a>
           </div>
         </div>
       </div>
@@ -258,7 +260,7 @@
           <span class="journey-index">01 · Empresa</span>
           <h3 class="journey-title" id="empresas-heading">Mais capacidade de execução. Mais visibilidade sobre o campo.</h3>
           <p class="journey-copy">Encontre profissionais adequados à demanda, organize o fluxo de trabalho em um só lugar e acompanhe a execução do início ao fim, sem depender de contato informal.</p>
-          <a class="btn btn--text" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Quero levar demandas à EHVOLUS</a>
+          <a class="btn btn--text" href="https://app.ehvolus.com.br/onboarding?perfil=empresa" target="_blank" rel="noopener" data-cta="empresa" data-cta-local="jornada">Quero levar demandas à EHVOLUS</a>
         </div>
         <figure class="journey-figure journey-figure--empresa">
           <div class="journey-photo-frame">
@@ -279,7 +281,7 @@
           <span class="journey-index">02 · Profissional</span>
           <h3 class="journey-title" id="profissionais-heading">Seu trabalho encontra novas oportunidades. Sua experiência constrói valor.</h3>
           <p class="journey-copy">Acesse demandas compatíveis com o que você faz, desenvolva reputação ao longo do tempo e trabalhe com a autonomia e a estrutura que faltavam.</p>
-          <a class="btn btn--text" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Quero prestar serviços</a>
+          <a class="btn btn--text" href="https://app.ehvolus.com.br/onboarding?perfil=profissional" target="_blank" rel="noopener" data-cta="profissional" data-cta-local="jornada">Quero prestar serviços</a>
         </div>
       </article>
 
@@ -288,7 +290,7 @@
           <span class="journey-index">03 · Cliente</span>
           <h3 class="journey-title" id="clientes-heading">Da necessidade ao serviço resolvido, sem ficar no escuro.</h3>
           <p class="journey-copy">Encontre a solução adequada para a sua necessidade e acompanhe quem atende, quando atende e como a execução avança até o fim.</p>
-          <a class="btn btn--text" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Preciso de um serviço</a>
+          <a class="btn btn--text" href="https://app.ehvolus.com.br/onboarding?perfil=cliente" target="_blank" rel="noopener" data-cta="cliente" data-cta-local="jornada">Preciso de um serviço</a>
         </div>
         <figure class="journey-figure journey-figure--cliente">
           <div class="journey-photo-frame">
@@ -390,9 +392,9 @@
     <div class="section-inner closing-inner">
       <h2 id="fechamento-heading">O próximo serviço pode começar por qualquer lado.</h2>
       <div class="closing-ctas">
-        <a class="btn btn--ghost-on-navy" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Sou empresa</a>
-        <a class="btn btn--ghost-on-navy" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Sou profissional</a>
-        <a class="btn btn--ghost-on-navy" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Preciso de um serviço</a>
+        <a class="btn btn--ghost-on-navy" href="https://app.ehvolus.com.br/onboarding?perfil=empresa" target="_blank" rel="noopener" data-cta="empresa" data-cta-local="fechamento">Sou empresa</a>
+        <a class="btn btn--ghost-on-navy" href="https://app.ehvolus.com.br/onboarding?perfil=profissional" target="_blank" rel="noopener" data-cta="profissional" data-cta-local="fechamento">Sou profissional</a>
+        <a class="btn btn--ghost-on-navy" href="https://app.ehvolus.com.br/onboarding?perfil=cliente" target="_blank" rel="noopener" data-cta="cliente" data-cta-local="fechamento">Preciso de um serviço</a>
       </div>
     </div>
   </section>
@@ -429,6 +431,7 @@
   </div>
   <div class="footer-bottom">
     <p class="footer-meta">© 2026 EHVOLUS. Todos os direitos reservados.</p>
+    <p class="footer-legal"><a href="https://app.ehvolus.com.br/privacidade" target="_blank" rel="noopener">Privacidade</a><a href="#" data-cookie-pref>Preferências de cookies</a></p>
     <p class="footer-tagline">Empresas, profissionais e clientes em um só fluxo.</p>
   </div>
 </footer>
