@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ehvolus.com.br/</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://ehvolus.com.br/</loc><lastmod>2026-10-22</lastmod><priority>1.0</priority></url>
+  <url><loc>https://ehvolus.com.br/conteudo/</loc><lastmod>2026-10-22</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ehvolus.com.br/conteudo/fila-de-instalacao-provedor/</loc><lastmod>2026-10-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ehvolus.com.br/conteudo/indicadores-operacao-de-campo/</loc><lastmod>2026-10-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ehvolus.com.br/conteudo/como-a-ehvolus-funciona/</loc><lastmod>2026-10-22</lastmod><priority>0.7</priority></url>
 </urlset>

@@ -1,3 +1,4 @@
+# Busca e assistentes de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended e outros) podem ler o site.
 User-agent: *
 Allow: /
 
