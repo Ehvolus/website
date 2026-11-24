@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=lab26">
+<link rel="stylesheet" href="assets/site.css?v=lab27">
 </head>
 <body>
 
@@ -45,6 +45,7 @@
     </a>
 
     <div class="header-actions">
+      <a class="header-link" href="mailto:contato@ehvolus.com.br" data-contact-open aria-haspopup="dialog">Fale conosco</a>
       <a class="header-link" href="https://app.ehvolus.com.br" target="_blank" rel="noopener">Login</a>
       <a class="btn btn--gold btn--sm" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Registro de interesse</a>
     </div>
@@ -63,6 +64,7 @@
       <li><a href="#proposito">Sobre</a></li>
     </ul>
     <div class="nav-panel-actions">
+      <a class="header-link header-link--panel" href="mailto:contato@ehvolus.com.br" data-contact-open aria-haspopup="dialog">Fale conosco</a>
       <a class="header-link header-link--panel" href="https://app.ehvolus.com.br" target="_blank" rel="noopener">Login</a>
       <a class="btn btn--gold" href="https://app.ehvolus.com.br/onboarding" target="_blank" rel="noopener">Registro de interesse</a>
     </div>
@@ -423,6 +425,7 @@
       </nav>
       <nav class="footer-col" aria-label="Contato">
         <p class="footer-col-title">Contato</p>
+        <a href="mailto:contato@ehvolus.com.br" data-contact-open aria-haspopup="dialog">Fale conosco</a>
         <a href="mailto:contato@ehvolus.com.br">contato@ehvolus.com.br</a>
       </nav>
     </div>
@@ -433,8 +436,120 @@
   </div>
 </footer>
 
+<!-- FALE CONOSCO · MODAL -->
+<dialog class="contact-dialog" id="contactDialog" aria-labelledby="contactTitle" aria-describedby="contactIntro">
+  <div class="contact-head">
+    <div>
+      <p class="eyebrow">Contato</p>
+      <h2 class="contact-title" id="contactTitle">Fale conosco</h2>
+      <p class="contact-intro" id="contactIntro">Conte quem você é e como podemos ajudar.</p>
+    </div>
+    <button type="button" class="contact-close" data-contact-close>Fechar</button>
+  </div>
+
+  <form class="contact-form" id="contactForm" novalidate>
+    <fieldset class="contact-profile" aria-describedby="cf-profile-error">
+      <legend class="contact-label">Você é</legend>
+      <div class="contact-profile-options">
+        <label class="contact-profile-option">
+          <input type="radio" name="profile" value="company" required>
+          <span class="contact-profile-card">
+            <strong>Empresa</strong>
+            <small>Preciso executar serviços</small>
+          </span>
+        </label>
+        <label class="contact-profile-option">
+          <input type="radio" name="profile" value="professional">
+          <span class="contact-profile-card">
+            <strong>Profissional</strong>
+            <small>Presto serviços</small>
+          </span>
+        </label>
+        <label class="contact-profile-option">
+          <input type="radio" name="profile" value="customer">
+          <span class="contact-profile-card">
+            <strong>Cliente</strong>
+            <small>Preciso de um serviço</small>
+          </span>
+        </label>
+      </div>
+      <p class="contact-error" id="cf-profile-error" data-error-for="profile"></p>
+    </fieldset>
+
+    <div class="contact-grid">
+      <div class="contact-field">
+        <label class="contact-label" for="cf-name">Nome</label>
+        <input class="contact-input" id="cf-name" name="name" type="text" maxlength="120" autocomplete="name" required aria-describedby="cf-name-error">
+        <p class="contact-error" id="cf-name-error" data-error-for="name"></p>
+      </div>
+
+      <div class="contact-field">
+        <label class="contact-label" for="cf-company">Empresa <span class="contact-optional">(opcional)</span></label>
+        <input class="contact-input" id="cf-company" name="company" type="text" maxlength="120" autocomplete="organization" aria-describedby="cf-company-error">
+        <p class="contact-error" id="cf-company-error" data-error-for="company"></p>
+      </div>
+
+      <div class="contact-field">
+        <label class="contact-label" for="cf-email">E-mail</label>
+        <input class="contact-input" id="cf-email" name="email" type="email" maxlength="254" autocomplete="email" inputmode="email" required aria-describedby="cf-email-error">
+        <p class="contact-error" id="cf-email-error" data-error-for="email"></p>
+      </div>
+
+      <div class="contact-field">
+        <label class="contact-label" for="cf-phone">Telefone ou WhatsApp <span class="contact-optional">(opcional)</span></label>
+        <input class="contact-input" id="cf-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" inputmode="tel" aria-describedby="cf-phone-error">
+        <p class="contact-error" id="cf-phone-error" data-error-for="phone"></p>
+      </div>
+
+      <div class="contact-field contact-field--full">
+        <div class="contact-label-row">
+          <label class="contact-label" for="cf-subject">Assunto <span class="contact-optional">(opcional)</span></label>
+          <span class="contact-count" id="cf-subject-count" data-count-for="cf-subject" aria-hidden="true">0/120</span>
+        </div>
+        <input class="contact-input" id="cf-subject" name="subject" type="text" maxlength="120" placeholder="Ex.: parceria em manutenção predial" aria-describedby="cf-subject-error cf-subject-limit">
+        <span class="sr-only" id="cf-subject-limit">Até 120 caracteres.</span>
+        <p class="contact-error" id="cf-subject-error" data-error-for="subject"></p>
+      </div>
+
+      <div class="contact-field contact-field--full">
+        <div class="contact-label-row">
+          <label class="contact-label" for="cf-message">Mensagem</label>
+          <span class="contact-count" id="cf-message-count" data-count-for="cf-message" aria-hidden="true">0/2000</span>
+        </div>
+        <textarea class="contact-input contact-textarea" id="cf-message" name="message" rows="5" maxlength="2000" required placeholder="Conte como podemos ajudar." aria-describedby="cf-message-error cf-message-limit"></textarea>
+        <span class="sr-only" id="cf-message-limit">Até 2000 caracteres.</span>
+        <p class="contact-error" id="cf-message-error" data-error-for="message"></p>
+      </div>
+    </div>
+
+    <div class="contact-hp" aria-hidden="true">
+      <label for="cf-website">Não preencha este campo</label>
+      <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="contact-status" id="contactStatus" role="alert" tabindex="-1"></div>
+    <p class="sr-only" id="contactLive" aria-live="polite"></p>
+
+    <div class="contact-actions">
+      <button type="submit" class="btn btn--gold btn--lg contact-submit" id="contactSubmit">Enviar mensagem</button>
+      <p class="contact-legal">
+        Usamos estes dados só para responder ao seu contato. <a href="https://app.ehvolus.com.br/privacidade" target="_blank" rel="noopener">Política de privacidade</a>.
+        Este formulário é protegido pelo reCAPTCHA do Google e seguem valendo a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade</a> e os <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Termos de Serviço</a> do Google.
+      </p>
+    </div>
+  </form>
+
+  <div class="contact-success" id="contactSuccess" tabindex="-1" hidden>
+    <span class="contact-success-badge" aria-hidden="true"><svg class="contact-success-mark" viewBox="0 0 24 24" width="34" height="34" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <h2 class="contact-success-title">Obrigado pelo contato.</h2>
+    <p class="contact-success-text">Recebemos sua mensagem. Vamos responder pelo e-mail informado.</p>
+    <button type="button" class="btn btn--gold" data-contact-close>Fechar</button>
+  </div>
+</dialog>
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
-<script src="assets/site.js?v=lab26"></script>
+<script src="assets/site.js?v=lab27"></script>
+<script src="assets/contact.js?v=lab27"></script>
 </body>
 </html>
