@@ -735,7 +735,7 @@
     /* frases que acendem palavra por palavra */
     toArray(document.querySelectorAll('[data-scrub-words]')).forEach(function (el) {
       var words = splitWords(el, 'scrub');
-      gsap.fromTo(words, { opacity: 0.14 }, {
+      gsap.fromTo(words, { opacity: 0.52 }, {
         opacity: 1,
         ease: 'none',
         stagger: 0.12,
